@@ -6,7 +6,7 @@ module.exports = {
       env: {
         NODE_ENV: "production",
         PORT: 3050,
-        MONGODB_URI: "mongodb+srv://mingsuser:Mings123@mingscluster.mongodb.net/mingsdb?retryWrites=true&w=majority"
+        MONGODB_URI: "mongodb+srv://raneaniket23_db_user:OI5H11tRz7h2ZUNF@pos.kk3ptmo.mongodb.net/?appName=POS"
       }
     }
   ]
