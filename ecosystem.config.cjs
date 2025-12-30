@@ -5,8 +5,8 @@ module.exports = {
       script: "./dist/index.cjs",
       env: {
         NODE_ENV: "production",
-        PORT: 3050, // Change this to your preferred available port
-        MONGODB_URI: "your_mongodb_connection_string"
+        PORT: 3050,
+        MONGODB_URI: "mongodb://your_actual_mongodb_uri_here"
       }
     }
   ]
