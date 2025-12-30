@@ -1,0 +1,51 @@
+3|DM-pos   |     at process.processTicksAndRejections (node:internal/process/task_queues:83:21) {
+3|DM-pos   |   code: 'EADDRINUSE',
+3|DM-pos   |   errno: -98,
+3|DM-pos   |   syscall: 'listen',
+3|DM-pos   |   address: '0.0.0.0',
+3|DM-pos   |   port: 5000
+3|DM-pos   | }
+3|DM-pos   | Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+3|DM-pos   |     at Server.setupListenHandle [as _listen2] (node:net:1902:16)
+3|DM-pos   |     at listenInCluster (node:net:1959:12)
+3|DM-pos   |     at doListen (node:net:2133:7)
+3|DM-pos   |     at process.processTicksAndRejections (node:internal/process/task_queues:83:21) {
+3|DM-pos   |   code: 'EADDRINUSE',
+3|DM-pos   |   errno: -98,
+3|DM-pos   |   syscall: 'listen',
+3|DM-pos   |   address: '0.0.0.0',
+3|DM-pos   |   port: 5000
+3|DM-pos   | }
+3|DM-pos   | Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+3|DM-pos   |     at Server.setupListenHandle [as _listen2] (node:net:1902:16)
+3|DM-pos   |     at listenInCluster (node:net:1959:12)
+3|DM-pos   |     at doListen (node:net:2133:7)
+3|DM-pos   |     at process.processTicksAndRejections (node:internal/process/task_queues:83:21) {
+3|DM-pos   |   code: 'EADDRINUSE',
+3|DM-pos   |   errno: -98,
+3|DM-pos   |   syscall: 'listen',
+3|DM-pos   |   address: '0.0.0.0',
+3|DM-pos   |   port: 5000
+3|DM-pos   | }
+
+3|DM-pos  | [Migration] Starting customer fields backfill...
+3|DM-pos  | [Migration] Customer fields migration complete:
+3|DM-pos  |         - Matched: 8 documents
+3|DM-pos  |         - Modified: 0 documents
+3|DM-pos  | [Migration] Removing deprecated tableName field...
+3|DM-pos  | [Migration] Removed tableName from 0 documents
+3|DM-pos  | 9:39:51 AM [express] Connected to MongoDB
+3|DM-pos  | 9:39:51 AM [express] WebSocket server initialized at /ws/table-status
+3|DM-pos  | 9:39:51 AM [express] MongoDB Change Stream established for table status updates
+3|DM-pos  | Error: listen EADDRINUSE: address already in use 0.0.0.0:5000
+3|DM-pos  |     at Server.setupListenHandle [as _listen2] (node:net:1902:16)
+3|DM-pos  |     at listenInCluster (node:net:1959:12)
+3|DM-pos  |     at doListen (node:net:2133:7)
+3|DM-pos  |     at process.processTicksAndRejections (node:internal/process/task_queues:83:21) {
+3|DM-pos  |   code: 'EADDRINUSE',
+3|DM-pos  |   errno: -98,
+3|DM-pos  |   syscall: 'listen',
+3|DM-pos  |   address: '0.0.0.0',
+3|DM-pos  |   port: 5000
+3|DM-pos  | }
+
