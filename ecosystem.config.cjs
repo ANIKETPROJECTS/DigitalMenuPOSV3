@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "DM-pos",
-      script: "./dist/index.cjs",
+      script: "./dist/index.js",
       env: {
         NODE_ENV: "production",
         PORT: 3050,

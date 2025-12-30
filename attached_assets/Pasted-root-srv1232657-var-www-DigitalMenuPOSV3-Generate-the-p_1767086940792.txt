@@ -1,0 +1,68 @@
+root@srv1232657:/var/www/DigitalMenuPOSV3# # Generate the production build
+npm run build
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+vite v5.4.19 building for production...
+✓ 2395 modules transformed.
+../dist/public/index.html                   0.80 kB │ gzip:   0.46 kB
+../dist/public/assets/index-CNtHk8ER.css   77.75 kB │ gzip:  13.59 kB
+../dist/public/assets/index-BEvRCRU9.js   978.90 kB │ gzip: 225.71 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 7.79s
+▲ [WARNING] Duplicate member "addFavorite" in class body [duplicate-class-member]
+
+    server/storage.ts:1274:8:
+      1274 │   async addFavorite(customerId: string, menuItemId: string): Promise<void> {
+           ╵         ~~~~~~~~~~~
+
+  The original member "addFavorite" is here:
+
+    server/storage.ts:859:8:
+      859 │   async addFavorite(customerId: string, menuItemId: string): Promise<void> {
+          ╵         ~~~~~~~~~~~
+
+▲ [WARNING] Duplicate member "removeFavorite" in class body [duplicate-class-member]
+
+    server/storage.ts:1289:8:
+      1289 │   async removeFavorite(customerId: string, menuItemId: string): Promise<void> {
+           ╵         ~~~~~~~~~~~~~~
+
+  The original member "removeFavorite" is here:
+
+    server/storage.ts:875:8:
+      875 │   async removeFavorite(customerId: string, menuItemId: string): Promise<void> {
+          ╵         ~~~~~~~~~~~~~~
+
+▲ [WARNING] Duplicate member "getCustomerFavorites" in class body [duplicate-class-member]
+
+    server/storage.ts:1304:8:
+      1304 │   async getCustomerFavorites(customerId: string): Promise<string[]> {
+           ╵         ~~~~~~~~~~~~~~~~~~~~
+
+  The original member "getCustomerFavorites" is here:
+
+    server/storage.ts:891:8:
+      891 │   async getCustomerFavorites(customerId: string): Promise<string[]> {
+          ╵         ~~~~~~~~~~~~~~~~~~~~
+
+3 warnings
+
+  dist/index.js  51.2kb
+
+⚡ Done in 11ms
+root@srv1232657:/var/www/DigitalMenuPOSV3# # Start with PM2
+pm2 start ecosystem.config.cjs
+
+# Save the process list so it persists after reboot
+pm2 save
+[PM2][WARN] Applications DM-pos not running, starting...
+[PM2][ERROR] Error: Script not found: /var/www/DigitalMenuPOSV3/dist/index.cjs
+[PM2] Saving current process list...
+[PM2] Successfully saved in /root/.pm2/dump.pm2
+root@srv1232657:/var/www/DigitalMenuPOSV3#
